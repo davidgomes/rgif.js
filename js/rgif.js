@@ -49,4 +49,3 @@ var RGif = (function() {
 }());
 
 var images = ["res/ball1.png", "res/ball2.png", "res/ball3.png"];
-var myRandomGif = new RGif("myrgif", images, [1000, 5000]).start();
