@@ -47,5 +47,3 @@ var RGif = (function() {
 
   return constructor;
 }());
-
-var images = ["res/ball1.png", "res/ball2.png", "res/ball3.png"];
