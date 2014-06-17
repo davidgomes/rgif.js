@@ -1,8 +1,11 @@
 var RGif = (function() {
-  function getRandomInt(min, max) {
+
+  /* Returns a random integer between 'min' and 'max' */
+  function getRandomInt(min, max) {    
     return Math.floor(Math.random() * (max - min + 1)) + min;
   }
 
+  /* Pre loads a given image with path 'name' */
   function preloadImage(name) {
     var image = new Image();
     image.src = name;
