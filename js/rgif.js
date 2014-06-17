@@ -12,11 +12,11 @@ var RGif = (function() {
   }
 
   /* Sets up the library variables and preloads all the images */
-  function constructor(id, images, range) {
-    this.id = id;
+  function constructor(options) {
+    this.id = options.id;
     this.element = document.getElementById(this.id);
-    this.images = images;
-    this.range = range;
+    this.images = options.images;
+    this.range = options.range;
     this.currentImageIndex = 0;
     this.timeout = undefined;
 
