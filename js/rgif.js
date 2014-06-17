@@ -13,7 +13,7 @@ var RGif = (function() {
     this.element = document.getElementById(this.id);
     this.images = images;
     this.range = range;
-    this.currentImage = 0;
+    this.currentImageIndex = 0;
     this.timeout = undefined;
 
     for (var i = 0; i < this.images.length; i++) {
@@ -24,10 +24,10 @@ var RGif = (function() {
   constructor.prototype = {
     start: function() {
       var updateImage = (function() {
-        this.element.src = this.images[++this.currentImage];
+        this.element.src = this.images[++this.currentImageIndex];
 
-        if (this.currentImage === this.images.length - 1) {
-          this.currentImage = 0;
+        if (this.currentImageIndex === this.images.length - 1) {
+          this.currentImageIndex = 0;
         }
 
         this.timeout = setTimeout(updateImage, getRandomInt(this.range[0], this.range[1]));
