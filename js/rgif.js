@@ -10,7 +10,8 @@ var RGif = (function() {
     var image = new Image();
     image.src = name;
   }
-  
+
+  /* Sets up the library variables and preloads all the images */
   function constructor(id, images, range) {
     this.id = id;
     this.element = document.getElementById(this.id);
@@ -25,6 +26,7 @@ var RGif = (function() {
   }
 
   constructor.prototype = {
+    /* Sets up a timer to get the image running */
     start: function() {
       var updateImage = (function() {
         this.element.src = this.images[++this.currentImageIndex];
@@ -41,6 +43,7 @@ var RGif = (function() {
       return this;
     },
 
+    /* Stops the image from skipping */
     stop: function() {
       clearTimeout(this.timeout);
 
